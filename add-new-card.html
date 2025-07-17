@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add new card | Grocery Mart</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Grocery Mart" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header"></header>
+  <script>
+    load("#header", "./templates/header-logined.html");
+  </script>
+
+
+  <!-- Main -->
+  <main class="profile">
+    <div class="container">
+      <div class="profile-container">
+        <!-- Search bar -->
+        <div class="profile-container">
+          <div class="search-bar d-none d-md-flex">
+            <input type="text" class="search-bar__input" placeholder="Search for item">
+            <button class="search-bar__submit">
+              <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon">
+            </button>
+          </div>
+        </div>
+
+        <!-- Profile content -->
+        <div class="profile-container">
+          <div class="row">
+            <!-- Sidebar -->
+            <div class="col-3 col-xl-4 d-lg-none">
+              <aside class="profile__sidebar">
+                <!-- User -->
+                <div class="profile-user">
+                  <img src="./assets/img/avatar/avatar-1.png" alt="" class="profile-user__avatar">
+                  <h1 class="profile-user__name">Imran Khan</h1>
+                  <p class="profile-user__desc">Registered: 17th May 2022</p>
+                </div>
+
+                <!-- Menu 1 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Manage Account</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/profile.svg" alt="" class="icon">
+                        </span>
+                        Personal info
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/address.svg" alt="" class="icon">
+                        </span>
+                        Addresses
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/message.svg" alt="" class="icon">
+                        </span>
+                        Communications & privacy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Menu 2 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">My items</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/reorder.svg" alt="" class="icon">
+                        </span>
+                        Reorder
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/heart-2.svg" alt="" class="icon">
+                        </span>
+                        Lists
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/gift-small.svg" alt="" class="icon">
+                        </span>
+                        Registries
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Menu 3 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Subscriptions & plans</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/protect.svg" alt="" class="icon">
+                        </span>
+                        Protection plans
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Menu 4 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Customer Service</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/help.svg" alt="" class="icon">
+                        </span>
+                        Help
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/danger-circle.svg" alt="" class="icon">
+                        </span>
+                        Terms of Use
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+            <div class="col-9 col-xl-8 col-lg-12">
+              <div class="profile-info">
+                <div class="col-12">
+                  <h2 class="profile-info__heading">
+                    <a href="./profile.html">
+                      <img src="./assets/icons/arrow-left.svg" alt="" class="cart-info__back-arrow icon">
+                    </a>
+                    Add credit or debit card
+                  </h2>
+
+                  <form action="./profile.html" class="form form-card">
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label for="name" class="form__label form__label--medium">First name</label>
+                        <div class="form__text-input">
+                          <input type="text" name="name" id="name" class="form__input" placeholder="First name"
+                            minlength="2" required autofocus>
+                          <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">First name must be at least 2 characters</p>
+                      </div>
+
+                      <div class="form__group">
+                        <label for="phone" class="form__label form__label--medium">Last name</label>
+                        <div class="form__text-input">
+                          <input type="text" name="phone" id="phone" class="form__input" placeholder="Last name"
+                            minlength="2" required>
+                          <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">Last name must be at least 2 characters</p>
+                      </div>
+                    </div>
+
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label for="name" class="form__label form__label--medium">Card Information</label>
+                        <div class="form__text-input">
+                          <input type="text" name="name" id="name" class="form__input" placeholder="Card Number"
+                            minlength="2" required>
+                          <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">First name must be at least 2 characters</p>
+                      </div>
+
+                      <div class="form__group">
+                        <label for="phone" class="form__label form__label--medium">Expiration Date</label>
+                        <div class="form__text-input">
+                          <input type="text" name="phone" id="phone" class="form__input" placeholder="MM/YY"
+                            minlength="2" required>
+                          <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">Last name must be at least 2 characters</p>
+                      </div>
+                    </div>
+
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label for="name" class="form__label form__label--medium">CVV</label>
+                        <div class="form__text-input">
+                          <input type="text" name="name" id="name" class="form__input" placeholder="CVV" minlength="2"
+                            required>
+                          <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">First name must be at least 2 characters</p>
+                      </div>
+
+                      <div class="form__group">
+                        <label for="phone" class="form__label form__label--medium">Phone Number</label>
+                        <div class="form__text-input">
+                          <input type="text" name="phone" id="phone" class="form__input" placeholder="Phone Number"
+                            minlength="2" required>
+                          <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">Last name must be at least 2 characters</p>
+                      </div>
+                    </div>
+
+
+                    <div class="form__group form-card__reference">
+                      <label class="form-card__text-reference">Card Preferences</label>
+                      <label class="form__checkbox">
+                        <input type="checkbox" name="" id="" class="form__checkbox-input d-none" checked>
+                        <span class="form__checkbox-label">Set as default card</span>
+                      </label>
+                    </div>
+
+                    <div class="form-card__cta">
+                      <a class="btn btn--text form-card__cancel" href="./profile.html">Cancel</a>
+                      <button class="btn btn--primary btn--rounded">Save Card</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer"></footer>
+
+  <script>
+    load("#footer", "./templates/footer.html");
+  </script>
+
+  <!--  Modal: Confirm remove shopping item -->
+  <div id="delete-confirm" class="modal modal--small hide">
+    <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
+    <div class="modal__content">
+      <div class="modal__text">
+        Do you want to remove this item from shopping shipping?
+      </div>
+      <div class="modal__bottom">
+        <button class="btn btn--small btn--text modal__btn-cancel js-toggle"
+          toggle-target="#delete-confirm">Cancel</button>
+        <button class="btn btn--small btn--primary modal__btn-delete btn-no-margin js-toggle"
+          toggle-target="#delete-confirm">Delete</button>
+      </div>
+    </div>
+    <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+  </div>
+</body>
+
+</html>

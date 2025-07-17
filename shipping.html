@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping | Grocery Mart</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Grocery Mart" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header"></header>
+  <script>
+    load("#header", "./templates/header-logined.html");
+  </script>
+
+
+  <!-- Main -->
+  <main class="shipping-page">
+    <div class="container">
+      <div class="shipping-container">
+        <!-- Search bar -->
+        <div class="shipping-container">
+          <div class="search-bar d-none d-md-flex">
+            <input type="text" class="search-bar__input" placeholder="Search for item">
+            <button class="search-bar__submit">
+              <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon">
+            </button>
+          </div>
+        </div>
+        <!-- Breadcrumbs -->
+        <div class="shipping-container">
+          <ul class="breadcrumb shipping-page__breadcrumbs">
+            <li>
+              <a href="./" class="breadcrumb__link">
+                Home
+                <img src="./assets/icons/arrow-right.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="./checkout.html" class="breadcrumb__link">
+                Checkout
+                <img src="./assets/icons/arrow-right.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumb__link">
+                Shipping
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- shipping content -->
+        <div class="shipping-container">
+          <div class="row gy-xl-3">
+            <div class="col-8 col-xl-12">
+              <div class="shipping-info">
+                <h1 class="shipping-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
+                <div class="shipping-info__separate"></div>
+                <div class="user-address">
+                  <div class="user-address__top">
+                    <div>
+                      <h2 class="user-address__title">Shipping address</h2>
+                      <p class="user-address__desc">Where should we deliver your order?</p>
+                    </div>
+                    <button class="btn btn--primary btn--rounded js-toggle" toggle-target="#add-new-address">
+                      <img src="./assets/icons/plus.svg" alt="">
+                      Add a new address
+                    </button>
+                  </div>
+                  <div class="user-address__list">
+                    <!-- Empty message
+                    <p class="user-address__message">
+                      Not address yet.<a class="user-address__link js-toggle" href="#!" toggle-target="#add-new-address">Add a new address</a>
+                    </p> -->
+                    <!-- Address 1 -->
+                    <article class="address-card">
+                      <div class="address-card__left">
+                        <div class="address-card__choose">
+                          <label class="address-card__checkbox">
+                            <input type="radio" class="address-card__checkbox-input" name="address" checked>
+                          </label>
+                        </div>
+                        <div class="address-card__info">
+                          <h3 class="address-card__title">Imran Khan</h3>
+                          <p class="address-card__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
+                          <ul class="address-card__list">
+                            <li class="address-card__list-item">Shipping</li>
+                            <li class="address-card__list-item">Delivery from store</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="address-card__right">
+                        <div class="address-card__ctrl">
+                          <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
+                            <img src="./assets/icons/edit.svg" alt="" class="icon">
+                            Edit
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- Address 2 -->
+                    <article class="address-card">
+                      <div class="address-card__left">
+                        <div class="address-card__choose">
+                          <label class="address-card__checkbox">
+                            <input type="radio" class="address-card__checkbox-input" name="address">
+                          </label>
+                        </div>
+                        <div class="address-card__info">
+                          <h3 class="address-card__title">Imran Khan</h3>
+                          <p class="address-card__desc">Al Hamra City (10th Floor), Hazrat Shahjalal Road, Sylhet,
+                            Sylhet, Bangladesh</p>
+                          <ul class="address-card__list">
+                            <li class="address-card__list-item">Shipping</li>
+                            <li class="address-card__list-item">Delivery from store</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="address-card__right">
+                        <div class="address-card__ctrl">
+                          <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
+                            <img src="./assets/icons/edit.svg" alt="" class="icon">
+                            Edit
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="shipping-info__separate"></div>
+                <h2 class="shipping-info__sub-heading">Items details</h2>
+                <!-- shipping info list -->
+                <div class="shipping-info__list">
+                  <!-- shipping item 1 -->
+                  <article class="shipping-item">
+                    <a href="./product-detail.html">
+                      <img src="./assets/img/products/product-1.png" alt="" class="shipping-item__thumb">
+                    </a>
+                    <div class="shipping-item__content">
+                      <div class="shipping-item__content-left">
+                        <h3 class="shipping-item__title">
+                          <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                        </h3>
+                        <p class="shipping-item__price-wrap">
+                          $47.00 | <span class="shipping-item__status">In Stock</span>
+                        </p>
+                        <div class="shipping-item__ctrl">
+                          <div class="shipping-item__input">
+                            LavAzza
+                            <img src="./assets/icons/arrow-down-2.svg" alt="" class="icon">
+                          </div>
+
+                          <div class="shipping-item__input">
+                            <button class="shipping-item__input-btn">
+                              <img src="./assets/icons/minus.svg" alt="" class="icon">
+                            </button>
+                            <span>1</span>
+                            <button class="shipping-item__input-btn">
+                              <img src="./assets/icons/plus.svg" alt="" class="icon">
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping-item__content-right">
+                        <div class="shipping-item__total-price">$47.00</div>
+                        <div class="shipping-item__ctrl">
+                          <button class="shipping-item__ctrl-btn">
+                            <img src="./assets/icons/heart-2.svg" alt="">
+                            Save
+                          </button>
+                          <button class="shipping-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                            <img src="./assets/icons/bin.svg" alt="">
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Shipping item 2 -->
+                  <article class="shipping-item">
+                    <a href="./product-detail.html">
+                      <img src="./assets/img/products/product-1.png" alt="" class="shipping-item__thumb">
+                    </a>
+                    <div class="shipping-item__content">
+                      <div class="shipping-item__content-left">
+                        <h3 class="shipping-item__title">
+                          <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                        </h3>
+                        <p class="shipping-item__price-wrap">
+                          $47.00 | <span class="shipping-item__status">In Stock</span>
+                        </p>
+                        <div class="shipping-item__ctrl">
+                          <div class="shipping-item__input">
+                            LavAzza
+                            <img src="./assets/icons/arrow-down-2.svg" alt="" class="icon">
+                          </div>
+
+                          <div class="shipping-item__input">
+                            <button class="shipping-item__input-btn">
+                              <img src="./assets/icons/minus.svg" alt="" class="icon">
+                            </button>
+                            <span>1</span>
+                            <button class="shipping-item__input-btn">
+                              <img src="./assets/icons/plus.svg" alt="" class="icon">
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping-item__content-right">
+                        <div class="shipping-item__total-price">$47.00</div>
+                        <div class="shipping-item__ctrl">
+                          <button class="shipping-item__ctrl-btn">
+                            <img src="./assets/icons/heart-2.svg" alt="">
+                            Save
+                          </button>
+                          <button class="shipping-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                            <img src="./assets/icons/bin.svg" alt="">
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- shipping item 3 -->
+                  <article class="shipping-item">
+                    <a href="./product-detail.html">
+                      <img src="./assets/img/products/product-1.png" alt="" class="shipping-item__thumb">
+                    </a>
+                    <div class="shipping-item__content">
+                      <div class="shipping-item__content-left">
+                        <h3 class="shipping-item__title">
+                          <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                        </h3>
+                        <p class="shipping-item__price-wrap">
+                          $47.00 | <span class="shipping-item__status">In Stock</span>
+                        </p>
+                        <div class="shipping-item__ctrl">
+                          <div class="shipping-item__input">
+                            LavAzza
+                            <img src="./assets/icons/arrow-down-2.svg" alt="" class="icon">
+                          </div>
+
+                          <div class="shipping-item__input">
+                            <button class="shipping-item__input-btn">
+                              <img src="./assets/icons/minus.svg" alt="" class="icon">
+                            </button>
+                            <span>1</span>
+                            <button class="shipping-item__input-btn">
+                              <img src="./assets/icons/plus.svg" alt="" class="icon">
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping-item__content-right">
+                        <div class="shipping-item__total-price">$47.00</div>
+                        <div class="shipping-item__ctrl">
+                          <button class="shipping-item__ctrl-btn">
+                            <img src="./assets/icons/heart-2.svg" alt="">
+                            Save
+                          </button>
+                          <button class="shipping-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                            <img src="./assets/icons/bin.svg" alt="">
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- shipping info bottom -->
+                <div class="shipping-info__bottom d-md-none">
+                  <div class="shipping-info__continue">
+                    <a href="./" class="shipping-info__continue-link">
+                      <img src="./assets/icons/arrow-down-2.svg" alt="" class="shipping-info__continue-icon icon">
+                      Continue Shopping
+                    </a>
+                  </div>
+                  <a href="./payment.html" class="btn btn--primary btn--rounded">Continue</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-xl-12">
+              <div class="shipping-info">
+                <div class="shipping-info__row">
+                  <span>Subtotal (items)</span>
+                  <span>3</span>
+                </div>
+                <div class="shipping-info__row">
+                  <span>Price (Total)</span>
+                  <span>$191.65</span>
+                </div>
+                <div class="shipping-info__row">
+                  <span>Shipping</span>
+                  <span>$10.00</span>
+                </div>
+                <div class="shipping-info__separate"></div>
+                <div class="shipping-info__row">
+                  <span>Estimated Total</span>
+                  <span>$201.65</span>
+                </div>
+                <a href="./shipping.html"
+                  class="btn btn--primary btn--rounded shipping-info__check-out d-none d-md-flex">Continue
+                  to checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer"></footer>
+
+  <script>
+    load("#footer", "./templates/footer.html");
+  </script>
+
+  <!--  Modal: Confirm remove shopping item -->
+  <div id="delete-confirm" class="modal modal--small hide">
+    <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
+    <div class="modal__content">
+      <div class="modal__text">
+        Do you want to remove this item from shopping shipping?
+      </div>
+      <div class="modal__bottom">
+        <button class="btn btn--small btn--text modal__btn-cancel js-toggle"
+          toggle-target="#delete-confirm">Cancel</button>
+        <button class="btn btn--small btn--primary modal__btn-delete btn-no-margin js-toggle"
+          toggle-target="#delete-confirm">Delete</button>
+      </div>
+    </div>
+    <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+  </div>
+
+  <!--  Modal: Add new shopping address -->
+  <div id="add-new-address" class="modal hide" style="--content-width: 650px">
+
+    <div class="modal__content">
+      <form action="" class="form"></form>
+      <h2 class="modal__heading">Add new shipping address</h2>
+      <div class="modal__body">
+        <div class="form__row">
+          <div class="form__group">
+            <label for="name" class="form__label form__label--small">Name</label>
+            <div class="form__text-input">
+              <input type="text" name="name" id="name" class="form__input" placeholder="Name" minlength="2" required>
+              <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+            </div>
+            <p class="form__error">Name must be at least 2 characters</p>
+          </div>
+
+          <div class="form__group">
+            <label for="phone" class="form__label form__label--small">Phone</label>
+            <div class="form__text-input">
+              <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone" minlength="10" required>
+              <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+            </div>
+            <p class="form__error">Phone must be at least 11 characters</p>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label for="address" class="form__label form__label--small">Address</label>
+          <div class="form__text-area">
+            <textarea name="address" id="address" class="form__text-area-input" placeholder="Address (Area and street)"
+              required></textarea>
+          </div>
+          <p class="form__error">Address not empty</p>
+        </div>
+
+        <div class="form__group">
+          <label for="city" class="form__label form__label--small">City/District/Town</label>
+          <div class="form__text-input">
+            <input type="text" name="city" id="city" class="form__input js-toggle" toggle-target="#city-dialog"
+              placeholder="City/District/Town" required readonly>
+            <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+
+            <div id="city-dialog" class="form__select-dialog hide">
+              <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
+              <button class="modal__close js-toggle d-none d-sm-block icon"
+                toggle-target="#city-dialog">&times;</button>
+              <div class="form__search">
+                <input type="text" class="input form__search-input" placeholder="Search">
+                <img src="./assets/icons/search.svg" alt="" class="input form__search-icon icon">
+              </div>
+              <ul class="form__options-list">
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option form__option--active">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+              </ul>
+            </div>
+          </div>
+          <p class="form__error"></p>
+        </div>
+
+        <div class="form__group form__group--inline">
+          <label class="form__checkbox">
+            <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
+            <span class="form__checkbox-label">Set as default address</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal__bottom">
+        <button class="btn btn--small btn--text modal__btn-cancel js-toggle"
+          toggle-target="#add-new-address">Cancel</button>
+        <button class="btn btn--small btn--primary btn-no-margin js-toggle"
+          toggle-target="#add-new-address">Create</button>
+      </div>
+      </form>
+    </div>
+    <div class="modal__overlay"></div>
+  </div>
+
+</body>
+
+</html>

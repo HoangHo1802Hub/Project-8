@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping | Grocery Mart</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Grocery Mart" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header"></header>
+  <script>
+    load("#header", "./templates/header-logined.html");
+  </script>
+
+
+  <!-- Main -->
+  <main class="shipping-page">
+    <div class="container">
+      <div class="shipping-container">
+        <!-- Search bar -->
+        <div class="shipping-container">
+          <div class="search-bar d-none d-md-flex">
+            <input type="text" class="search-bar__input" placeholder="Search for item">
+            <button class="search-bar__submit">
+              <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon">
+            </button>
+          </div>
+        </div>
+        <!-- Breadcrumbs -->
+        <div class="shipping-container">
+          <ul class="breadcrumb shipping-page__breadcrumbs">
+            <li>
+              <a href="./" class="breadcrumb__link">
+                Home
+                <img src="./assets/icons/arrow-right.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="./checkout.html" class="breadcrumb__link">
+                Checkout
+                <img src="./assets/icons/arrow-right.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="./shipping.html" class="breadcrumb__link">
+                Shipping
+                <img src="./assets/icons/arrow-right.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumb__link">
+                Payment method
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- shipping content -->
+        <div class="shipping-container">
+          <div class="row gy-xl-3">
+            <div class="col-8 col-lg-12">
+              <div class="shipping-info">
+                <div class="shipping-info__top">
+                  <h2 class="shipping-info__heading shipping-info__heading--lv2">1. Shipping, arrives between Mon, May
+                    16—Tue, May 24</h2>
+                  <a class="address-card__ctrl-btn" href="./shipping.html">
+                    <img src="./assets/icons/edit.svg" alt="" class="icon">
+                    Edit
+                  </a>
+                </div>
+                <!-- Payment 1 -->
+                <article class="payment-item">
+                  <div class="payment-item__content">
+                    <div class="payment-item__info">
+                      <div class="payment-item__title">Imran Khan</div>
+                      <div class="payment-item__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</div>
+                    </div>
+                  </div>
+                </article>
+                <!-- Payment 2 -->
+                <article class="payment-item">
+                  <div class="payment-item__content">
+                    <div class="payment-item__info">
+                      <div class="payment-item__title">Items details</div>
+                      <div class="payment-item__desc">2 items</div>
+                    </div>
+                  </div>
+                  <a href="./shipping.html" class="payment-item__detail">View details</a>
+                </article>
+              </div>
+              <div class="shipping-info">
+                <h2 class="shipping-info__heading shipping-info__heading--lv2">2. Shipping method</h2>
+                <div class="shipping-info__separate"></div>
+                <h3 class="shipping-info__sub-heading">Available Shipping method</h3>
+                <!-- Payment 3 -->
+                <label>
+                  <article class="payment-item payment-item--pointer">
+                    <img src="./assets/img/payment/payment-1.png" alt="" class="payment-item__thumb">
+                    <div class="payment-item__content payment-item__content">
+                      <div class="payment-item__info">
+                        <div class="payment-item__title">Fedex Delivery</div>
+                        <div class="payment-item__desc">Delivery: 2-3 days work</div>
+                      </div>
+
+                      <span class="address-card__checkbox payment-item__checkbox">
+                        <input type="radio" class="address-card__checkbox-input payment-item__checkbox-input"
+                          name="payment" checked>
+                        <span class="payment-item__cost">Free</span>
+                      </span>
+                    </div>
+                  </article>
+                </label>
+
+                <!-- Payment 4 -->
+                <label>
+                  <article class="payment-item payment-item--pointer">
+                    <img src="./assets/img/payment/payment-2.png" alt="" class="payment-item__thumb">
+                    <div class="payment-item__content">
+                      <div class="payment-item__info">
+                        <div class="payment-item__title">DHL Delivery</div>
+                        <div class="payment-item__desc">Delivery: 2-3 days work</div>
+                      </div>
+                      <span class="address-card__checkbox payment-item__checkbox">
+                        <input type="radio" class="address-card__checkbox-input payment-item__checkbox-input"
+                          name="payment">
+                        <span class="payment-item__cost">$12.00</span>
+                      </span>
+                    </div>
+                  </article>
+                </label>
+
+              </div>
+            </div>
+            <div class="col-4 col-lg-12">
+              <div class="shipping-info">
+                <h2 class="shipping-info__heading shipping-info__heading--lv2">Payment Details</h2>
+                <p class="shipping-info__desc">Complete your purchase item by providing your payment details order.</p>
+                <form action="" class="form shipping-info__form">
+                  <div class="form__group">
+                    <label for="email" class="form__label form__label--medium">Email Address</label>
+                    <div class="form__text-input">
+                      <input type="email" name="email" id="email" class="form__input" placeholder="Email" required>
+                      <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                    </div>
+                    <p class="form__error">Email is not correct format</p>
+                  </div>
+                  <div class="form__group">
+                    <label for="email" class="form__label form__label--medium">Card Holder</label>
+                    <div class="form__text-input">
+                      <input type="text" name="" id="" class="form__input" placeholder="Card Holder" required>
+                      <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                    </div>
+                    <p class="form__error">Email is not correct format</p>
+                  </div>
+                  <div class="form__group">
+                    <label for="email" class="form__label form__label--medium">Card Details</label>
+                    <div class="form__text-input">
+                      <input type="text" name="" id="" class="form__input" placeholder="Card Details" required>
+                      <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                    </div>
+                    <p class="form__error">Email is not correct format</p>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__group">
+                      <div class="form__text-input">
+                        <input type="text" name="" id="" class="form__input" placeholder="MM/YY" required>
+                        <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                      </div>
+                      <p class="form__error">Email is not correct format</p>
+                    </div>
+                    <div class="form__group">
+                      <div class="form__text-input">
+                        <input type="text" name="" id="" class="form__input" placeholder="CVC" required>
+                        <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                      </div>
+                      <p class="form__error">Email is not correct format</p>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="shipping-info__row">
+                  <span>Subtotal (items)</span>
+                  <span>3</span>
+                </div>
+                <div class="shipping-info__row">
+                  <span>Price (Total)</span>
+                  <span>$191.65</span>
+                </div>
+                <div class="shipping-info__row">
+                  <span>Shipping</span>
+                  <span>$10.00</span>
+                </div>
+                <div class="shipping-info__separate"></div>
+                <div class="shipping-info__row">
+                  <span>Estimated Total</span>
+                  <span>$201.65</span>
+                </div>
+                <a href="#!" class="btn btn--primary shipping-info__pay">Pay $465.98</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer"></footer>
+
+  <script>
+    load("#footer", "./templates/footer.html");
+  </script>
+
+  <!--  Modal: Confirm remove shopping item -->
+  <div id="delete-confirm" class="modal modal--small hide">
+    <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
+    <div class="modal__content">
+      <div class="modal__text">
+        Do you want to remove this item from shopping shipping?
+      </div>
+      <div class="modal__bottom">
+        <button class="btn btn--small btn--text modal__btn-cancel js-toggle"
+          toggle-target="#delete-confirm">Cancel</button>
+        <button class="btn btn--small btn--primary modal__btn-delete btn-no-margin js-toggle"
+          toggle-target="#delete-confirm">Delete</button>
+      </div>
+    </div>
+    <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+  </div>
+
+  <!--  Modal: Add new shopping address -->
+  <div id="add-new-address" class="modal hide" style="--content-width: 650px">
+
+    <div class="modal__content">
+      <form action="" class="form"></form>
+      <h2 class="modal__heading">Add new shipping address</h2>
+      <div class="modal__body">
+        <div class="form__row">
+          <div class="form__group">
+            <label for="name" class="form__label form__label--small">Name</label>
+            <div class="form__text-input">
+              <input type="text" name="name" id="name" class="form__input" placeholder="Name" minlength="2" required>
+              <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+            </div>
+            <p class="form__error">Name must be at least 2 characters</p>
+          </div>
+
+          <div class="form__group">
+            <label for="phone" class="form__label form__label--small">Phone</label>
+            <div class="form__text-input">
+              <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone" minlength="10" required>
+              <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+            </div>
+            <p class="form__error">Phone must be at least 11 characters</p>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label for="address" class="form__label form__label--small">Address</label>
+          <div class="form__text-area">
+            <textarea name="address" id="address" class="form__text-area-input" placeholder="Address (Area and street)"
+              required></textarea>
+          </div>
+          <p class="form__error">Address not empty</p>
+        </div>
+
+        <div class="form__group">
+          <label for="city" class="form__label form__label--small">City/District/Town</label>
+          <div class="form__text-input">
+            <input type="text" name="city" id="city" class="form__input js-toggle" toggle-target="#city-dialog"
+              placeholder="City/District/Town" required>
+            <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+
+            <div id="city-dialog" class="form__select-dialog hide">
+              <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
+              <button class="modal__close js-toggle d-none d-sm-block icon"
+                toggle-target="#city-dialog">&times;</button>
+              <div class="form__search">
+                <input type="text" class="input form__search-input" placeholder="Search">
+                <img src="./assets/icons/search.svg" alt="" class="input form__search-icon icon">
+              </div>
+              <ul class="form__options-list">
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option form__option--active">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Da Nang</li>
+                <li class="form__option">Ha Noi</li>
+                <li class="form__option">Ho Chi Minh</li>
+                <li class="form__option">Da Nang</li>
+              </ul>
+            </div>
+          </div>
+          <p class="form__error"></p>
+        </div>
+
+        <div class="form__group form__group--inline">
+          <label class="form__checkbox">
+            <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
+            <span class="form__checkbox-label">Set as default address</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal__bottom">
+        <button class="btn btn--small btn--text modal__btn-cancel js-toggle"
+          toggle-target="#add-new-address">Cancel</button>
+        <button class="btn btn--small btn--primary btn-no-margin js-toggle"
+          toggle-target="#add-new-address">Create</button>
+      </div>
+      </form>
+    </div>
+    <div class="modal__overlay"></div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+@use "../abstracts";
+
+.form-card {
+    &__reference {
+        margin-top: 30px;
+    }
+
+    &__text-reference {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__cta {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 30px;
+    }
+
+    &__cancel {
+        font-weight: 500;
+    }
+}
